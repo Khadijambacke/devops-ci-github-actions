@@ -1,0 +1,62 @@
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mise en page générale */
+body {
+    background-color: #f4f6f8;
+    padding: 40px;
+}
+
+/* Titre */
+header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Card */
+.card {
+    display: flex;                /* image à gauche, texte à droite */
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;             /* coupe ce qui dépasse */
+}
+
+/* Image */
+.card img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Contenu texte */
+.card-content {
+    padding: 20px;
+}
+
+/* Titres */
+.card-content h2 {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card-content p {
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Texte principal */
+.card-content h3 {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #444;
+}
