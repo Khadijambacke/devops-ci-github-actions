@@ -1,0 +1,16 @@
+name: CI workflows
+on:
+    push:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Récuperer le code
+              uses: actions/checkout@v4
+            - name: Lister les fichiers
+              run: ls -la
+
+            - name: Build de l'image Docker
+              run: docker build -t devops-ci-image .
