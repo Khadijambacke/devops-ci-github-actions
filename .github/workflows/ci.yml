@@ -7,7 +7,7 @@ jobs:
         
         env:
             IMAGE_NAME: testcicd
-            IMAGE_TAG: 1.0.0
+            IMAGE_TAG: 1.1.0
             DOCKER_HUB_REGISTRY: docker.io/khadijamba
         steps:
             - name: Récuperer le code
