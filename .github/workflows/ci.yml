@@ -28,10 +28,13 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build de l'image Docker
-        run: docker build -t $DOCKER_HUB_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
+        # run: docker build -t $DOCKER_HUB_REGISTRY/$IMAGE_NAME:$IMAGE_TAG .
+        run: docker build -t khadijamba/testcicd:1.1.0 .
 
       - name: Test de l'image Docker
-        run: docker image ls $DOCKER_HUB_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+        # run: docker image ls $DOCKER_HUB_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+        run: docker image ls khadijamba/testcicd:1.1.0 
+        
 
       - name: Push image Docker
-        run: docker push $DOCKER_HUB_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+        run: docker push khadijamba/testcicd:1.1.0 
