@@ -1,15 +1,16 @@
 name: CI workflows
+env:
+  IMAGE_NAME: testcicd
+  IMAGE_TAG: 1.1.0
+  DOCKER_HUB_REGISTRY: docker.io/khadijamba
+
 on:
   push:
 
 jobs:
   docker:
     runs-on: isi-suptech
-    env:
-      IMAGE_NAME: testcicd
-      IMAGE_TAG: 1.1.0
-      DOCKER_HUB_REGISTRY: docker.io/khadijamba
-
+   
     steps:
       - name: Récupérer le code
         uses: actions/checkout@v4
