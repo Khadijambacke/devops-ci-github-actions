@@ -34,7 +34,10 @@ jobs:
       - name: Test de l'image Docker
         # run: docker image ls $DOCKER_HUB_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
         run: docker image ls khadijamba/testcicd:1.1.0 
-        
 
       - name: Push image Docker
         run: docker push khadijamba/testcicd:1.1.0 
+      - name: Run du container
+        # run: docker image ls $DOCKER_HUB_REGISTRY/$IMAGE_NAME:$IMAGE_TAG
+        run: docker run  khadijamba/testcicd:1.1.0 
+        
